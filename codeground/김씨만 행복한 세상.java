@@ -15,7 +15,6 @@ class Solution {
 			
 		while(!queue.isEmpty()) {
 			int vRemove = queue.remove();
-			//System.out.println("vRemove "+vRemove);
 			
 			for(int i=1; i<=N; i++) {
 				if(vertex[vRemove][i] && !visited[i]) {
@@ -24,7 +23,6 @@ class Solution {
 					else
 						manager[i] = 'B';
 					
-					//System.out.println("i "+i+ " " +manager[i]);
 					queue.add(i);
 					visited[i] = true;
 					
@@ -56,12 +54,6 @@ class Solution {
 				b = sc.nextInt();
 				vertex[a][b] = vertex[b][a] = true;
 			}
-			
-			/*for(int i=1; i<=N; i++) {
-				for(int j=1; j<=N; j++)
-					System.out.print(vertex[i][j]);
-				System.out.println();
-			}*/
 			
 			System.out.println("Case #"+(test_case+1));
 			System.out.println(bfs(1));
